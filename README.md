@@ -1,75 +1,25 @@
-# Nuxt Minimal Starter
+# zarva.life
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Hi, I'm Roman Zarvanskyi — a frontend / full-stack developer from Ukraine.
 
-## Setup
+This is my personal website and the place where I document life as I actually live it: work, motorcycles, learning, building things, and everything in between. Think of it as a living portfolio and a personal journal rolled into one.
 
-Make sure to install dependencies:
+## What's here
 
-```bash
-# npm
-npm install
+**/** — The main landing page. A bit about who I am, what I do, and what drives me.
 
-# pnpm
-pnpm install
+**/work** — My professional side. Experience, companies I've worked with, and a portfolio of projects I've built. You can also download my CV in PDF.
 
-# yarn
-yarn install
+**/moto** — Motorcycles are my main hobby. I ride and restore them. This is where I share that part of life.
 
-# bun
-bun install
-```
+**/blog** — Articles I write. Thoughts on development, tools, ideas, and whatever else is on my mind.
 
-## Development Server
+**/growth** — The directions I'm actively exploring: embedded development, 3D printing, engineering design, and my YouTube learning channel.
 
-Start the development server on `http://localhost:3000`:
+## Why this exists
 
-```bash
-# npm
-npm run dev
+I believe the best way to stand out is to just be yourself — openly and consistently. This site is my attempt at that. It's built for potential clients who want to know who they're working with, and for anyone curious about the intersection of software, hardware, and a life well-lived.
 
-# pnpm
-pnpm dev
+---
 
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Built with Nuxt 4 · Vue 3 · TypeScript · Tailwind CSS 4
