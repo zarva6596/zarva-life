@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "home": "Home",
+    "work": "Work",
+    "moto": "Moto",
+    "blog": "Blog",
+    "growth": "Growth"
+  },
+  "pages": {
+    "home": {
+      "title": "Home"
+    },
+    "work": {
+      "title": "Work & Experience"
+    },
+    "moto": {
+      "title": "Motorcycles"
+    },
+    "blog": {
+      "title": "Blog"
+    },
+    "growth": {
+      "title": "Growth"
+    }
+  }
+}
