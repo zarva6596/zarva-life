@@ -1,10 +1,15 @@
 {
   "nav": {
     "home": "Home",
-    "work": "Work",
+    "cv": "CV",
+    "hobbies": "Hobbies",
     "moto": "Moto",
+    "embedded": "Embedded Dev",
+    "drones": "Drones",
+    "travel": "Travel",
+    "products": "My Products",
     "blog": "Blog",
-    "growth": "Growth"
+    "shop": "Shop"
   },
   "pages": {
     "home": {
