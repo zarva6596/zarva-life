@@ -1,6 +1,7 @@
-import type { CvTechItem, CvTechCategory, CvExperience } from '~/types/cv'
+import type { CvTechItem, CvTechCategory, CvExperience, CvProject } from '~/types/cv'
 
 export const useCvStore = defineStore('cv', () => {
+  const { t, tm } = useI18n()
   const softwarePrimaryTech: CvTechItem[] = [
     { icon: 'devicon:vuejs', name: 'Vue.js' },
     { icon: 'devicon:nuxtjs', name: 'Nuxt' },
@@ -133,94 +134,49 @@ export const useCvStore = defineStore('cv', () => {
     },
   ]
 
-  const softwareExperience: CvExperience[] = [
+  const upworkProjectsBase: Pick<CvProject, 'name' | 'tech' | 'link'>[] = [
+    { name: 'Bonny Moon Beach Club', tech: ['Nuxt', 'Directus', 'TypeScript', 'TailwindCSS'], link: 'https://www.bonnymoon.ky/' },
+    { name: 'Big Leap Health', tech: ['Nuxt', 'Prismic', 'TypeScript', 'TailwindCSS'], link: 'https://www.bigleaphealth.com/' },
+    { name: 'Room Service by Ash', tech: ['Nuxt', 'Storyblok', 'TypeScript', 'TailwindCSS'], link: 'https://www.orderroomservice.com/' },
+    { name: 'Ash Hotels', tech: ['Nuxt', 'Storyblok', 'TypeScript', 'TailwindCSS'], link: 'https://ash.world/' },
+    { name: 'Chase a Chance', tech: ['Nuxt 4', 'TypeScript', 'TailwindCSS', 'Pinia'], link: 'https://chaseachance.com/' },
+    { name: 'DemToes', tech: ['Nuxt', 'TypeScript', 'TailwindCSS', 'Pinia', 'REST API'], link: 'https://demtoes.com/' },
+    { name: 'Car City', tech: ['Vue 3', 'TailwindCSS', 'Laravel'], link: 'https://carcity.ky/' },
+    { name: 'Property Cayman', tech: ['WordPress'], link: 'https://propertycayman.com/' },
+  ]
+
+  const hoverlaProjectsBase: Pick<CvProject, 'name' | 'tech'>[] = [
+    { name: 'Relocation & Immigration SaaS', tech: ['Nuxt 3', 'TypeScript', 'TailwindCSS', 'Pinia', 'Element Plus'] },
+    { name: null, tech: ['Nuxt 2', 'Vue 3', 'Capacitor'] },
+    { name: null, tech: ['Vue 3', 'Nuxt 3', 'TypeScript', 'TailwindCSS'] },
+  ]
+
+  const resolveAchievements = (key: string): string[] => {
+    const raw = tm(key)
+    if (!Array.isArray(raw)) return []
+    return raw.map((_, j) => t(`${key}.${j}`))
+  }
+
+  const resolveProject = (prefix: string, base: Pick<CvProject, 'name' | 'tech' | 'link' | 'github'> | Pick<CvProject, 'name' | 'tech'>): CvProject => ({
+    ...base,
+    description: t(`${prefix}.description`),
+    role: t(`${prefix}.role`),
+    achievements: resolveAchievements(`${prefix}.achievements`),
+  })
+
+  const softwareExperience = computed<CvExperience[]>(() => [
     {
       company: 'Upwork',
       location: 'Ukraine',
       remote: 'remote',
       type: 'freelance',
       startDate: '2024-11-01',
-      role: 'Senior Front-end Developer',
-      description:
-        'Freelance Senior Front-end Developer working with international clients on diverse web projects — from premium hospitality websites to content marketplaces and trading platforms.',
+      role: t('pages.cv.experience.software.upwork.role'),
+      description: t('pages.cv.experience.software.upwork.description'),
       achievements: [],
-      projects: [
-        {
-          name: 'Bonny Moon Beach Club',
-          description:
-            'A website for a premium beachside venue in the Cayman Islands. Showcases dining experience, events (DJ nights, live music, private gatherings), amenity packages, and booking functionality for an international audience.',
-          role: 'Senior Front-end Developer',
-          achievements: [
-            'Built a sophisticated event scheduling system with rich media content',
-            'Integrated newsletter subscription functionality',
-          ],
-          tech: ['Nuxt', 'Directus', 'TypeScript', 'TailwindCSS'],
-          link: 'https://www.bonnymoon.ky/',
-        },
-        {
-          name: 'Big Leap Health',
-          description:
-            'A platform for locating nearby mental health clinics across the US, specializing in insurance-covered breakthrough treatments such as TMS therapy and Spravato (esketamine).',
-          role: 'Senior Front-end Developer',
-          achievements: [
-            'Implemented advanced search and filtering by condition, insurance provider, and location',
-            'Built clinic profiles with virtual tours and patient testimonials',
-            'Developed an online symptom assessment flow',
-          ],
-          tech: ['Nuxt', 'Prismic', 'TypeScript', 'TailwindCSS'],
-          link: 'https://www.bigleaphealth.com/',
-        },
-        {
-          name: 'Room Service by Ash',
-          description:
-            'A website for a premium full-suite FF&E (furnishing, decoration, and procurement) firm serving hospitality, commercial, and residential clients across the US.',
-          role: 'Senior Front-end Developer',
-          achievements: [
-            'Showcased completed projects and outlined the 9-step service process',
-            'Integrated contact and newsletter functionality',
-          ],
-          tech: ['Nuxt', 'Storyblok', 'TypeScript', 'TailwindCSS'],
-          link: 'https://www.orderroomservice.com/',
-        },
-        {
-          name: 'Ash Hotels',
-          description:
-            'A website for a collection of cinematic boutique luxury hotels across the United States (Providence, Baltimore, New Orleans, Detroit, Richmond).',
-          role: 'Senior Front-end Developer',
-          achievements: [
-            'Built hotel listings with city guides, souvenir shop, and gift cards',
-            'Integrated newsletter subscription',
-          ],
-          tech: ['Nuxt', 'Storyblok', 'TypeScript', 'TailwindCSS'],
-          link: 'https://ash.world/',
-        },
-        {
-          name: 'Chase a Chance',
-          description:
-            'A platform for collecting and trading baseball, Pokémon, and hockey cards, serving a global audience for a Canadian client.',
-          role: 'Senior Front-end Developer',
-          achievements: [
-            'Implemented pixel-perfect UI based on Figma designs',
-            'Integrated payment and notification systems',
-            'Built form validation and custom animations',
-          ],
-          tech: ['Nuxt 4', 'TypeScript', 'TailwindCSS', 'Pinia'],
-          link: 'https://chaseachance.com/',
-        },
-        {
-          name: 'DemToes',
-          description:
-            'A content marketplace platform connecting verified creators with buyers.',
-          role: 'Senior Front-end Developer',
-          achievements: [
-            'Implemented dual-role authentication (viewer/creator)',
-            'Built credit-based payment system with content unlocking and tipping',
-            'Developed custom content request flow and creator verification',
-          ],
-          tech: ['Nuxt', 'TypeScript', 'TailwindCSS', 'Pinia', 'REST API'],
-          link: 'https://demtoes.com/',
-        },
-      ],
+      projects: upworkProjectsBase.map((base, i) =>
+        resolveProject(`pages.cv.experience.software.upwork.projects.${i}`, base),
+      ),
     },
     {
       company: 'Hoverla Soft',
@@ -229,55 +185,12 @@ export const useCvStore = defineStore('cv', () => {
       type: 'full-time',
       startDate: '2021-09-01',
       endDate: '2024-11-01',
-      role: 'Vue.js Front-end Developer',
-      description:
-        'Front-end developer at a product-focused software company. Worked on large-scale SaaS platforms serving international clients in the relocation, immigration, and hospitality industries.',
-      achievements: [
-        'Developed and tested new features across multiple products',
-        'Set up SEO optimization — meta tags, Open Graph, structured data',
-        'Integrated third-party APIs and services',
-        'Participated in user story estimation, customer meetings, and sprint demos',
-        'Collaborated closely with designers and backend developers',
-        'Refactored and improved existing codebases',
-        'Wrote reusable components and maintained UI consistency',
-      ],
-      projects: [
-        {
-          name: 'Relocation & Immigration SaaS',
-          description:
-            'A large-scale product consisting of two interconnected SaaS platforms for relocation and immigration service providers. The company portal featured full white-label customization, invoice management, messaging, task tracking, document exchange, and meeting scheduling. The client portal enabled users to pay invoices, upload documents, book meetings, and receive notifications.',
-          role: 'Vue.js Front-end Developer',
-          achievements: [
-            'Built full white-label customization system (logos, interface visuals)',
-            'Implemented invoice management and document exchange flows',
-            'Developed messaging, task tracking, and meeting scheduling modules',
-          ],
-          tech: ['Nuxt 3', 'TypeScript', 'TailwindCSS', 'Pinia', 'Element Plus'],
-        },
-        {
-          name: null,
-          description:
-            'A multi-platform product consisting of three interconnected applications: a marketing landing with animations and SEO, a mobile app for restaurants and hotels (QR code ordering, menu browsing, reservations, payments), and an admin panel for managing products, QR codes, and platform settings.',
-          role: 'Vue.js Front-end Developer',
-          achievements: [
-            'Built a QR-code driven ordering and payment flow for mobile',
-            'Developed a full-featured admin panel for business management',
-            'Implemented engaging animations and SEO optimization on the landing',
-          ],
-          tech: ['Nuxt 2', 'Vue 3', 'Capacitor'],
-        },
-        {
-          name: null,
-          description:
-            'Worked on 10+ short-term projects involving landing pages, admin dashboards, e-commerce features, CMS integrations, and responsive layouts.',
-          role: 'Vue.js Front-end Developer',
-          achievements: [
-            'Built projects from scratch under tight deadlines',
-            'Implemented UI components, performance improvements, and bug fixes',
-          ],
-          tech: ['Vue 3', 'Nuxt 3', 'TypeScript', 'TailwindCSS'],
-        },
-      ],
+      role: t('pages.cv.experience.software.hoverla.role'),
+      description: t('pages.cv.experience.software.hoverla.description'),
+      achievements: resolveAchievements('pages.cv.experience.software.hoverla.achievements'),
+      projects: hoverlaProjectsBase.map((base, i) =>
+        resolveProject(`pages.cv.experience.software.hoverla.projects.${i}`, base),
+      ),
     },
     {
       company: 'Webtune',
@@ -286,17 +199,12 @@ export const useCvStore = defineStore('cv', () => {
       type: 'full-time',
       startDate: '2020-10-01',
       endDate: '2021-08-01',
-      role: 'Front-end Developer',
-      description:
-        'Front-end developer at a web studio. Responsible for creating responsive, pixel-perfect layouts based on Figma designs for marketing websites and landing pages, later integrated into WordPress by other developers.',
-      achievements: [
-        'Developed layouts for 6 client projects: Plit, Webtune, Indest, Ular, Optic, LivingRoom',
-        'Maintained and updated legacy projects',
-        'Implemented interactive elements such as maps and email templates',
-      ],
+      role: t('pages.cv.experience.software.webtune.role'),
+      description: t('pages.cv.experience.software.webtune.description'),
+      achievements: resolveAchievements('pages.cv.experience.software.webtune.achievements'),
       projects: [],
     },
-  ]
+  ])
 
   return {
     softwarePrimaryTech,
