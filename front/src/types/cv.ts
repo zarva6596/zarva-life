@@ -18,7 +18,9 @@ export interface CvProject {
   achievements: string[]
   tech: string[]
   link?: string
+  github?: string
   teamSize?: number
+  photos?: string[]
 }
 
 export interface CvExperience {
