@@ -3,6 +3,8 @@ import type { TechItem, TechCategory } from '~/components/general/cv/CvSkillsLis
 
 const { t } = useI18n()
 
+const about = computed(() => [t('pages.cv.about1'), t('pages.cv.about2')])
+
 const primaryTech: TechItem[] = [
   { icon: 'devicon:vuejs', name: 'Vue.js' },
   { icon: 'devicon:nuxtjs', name: 'Nuxt' },
@@ -138,6 +140,8 @@ const categories = computed<TechCategory[]>(() => [
 
 <template>
   <div class="flex flex-col items-center gap-8 px-6 py-4">
+    <CvAbout :paragraphs="about" />
+
     <CvDownload href="/Roman Zarvanskyi CV.pdf" />
 
     <CvSkillsList :primary-tech="primaryTech" :categories="categories" />

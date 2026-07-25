@@ -29,6 +29,8 @@
         "software": "Senior Software Developer",
         "hardware": "Junior Hardware Developer"
       },
+      "about1": "Front-end developer with over 6 years of commercial experience. Specialized in building scalable web applications across e-commerce, SaaS platforms, multifunctional admin panels, and landing pages. Proficient in Vue 3 / Nuxt 3 and React / Next.js on the frontend, with growing fullstack expertise using NestJS on the backend.",
+      "about2": "Skilled in developing and integrating custom UI components and full design systems, including publishing reusable libraries to npm. Experience with payment systems, CMS integrations, and document management features. Actively leverages AI tools in daily workflow to boost productivity and code quality.",
       "downloadCv": "Download CV",
       "techStack": {
         "showMore": "Show full stack",
