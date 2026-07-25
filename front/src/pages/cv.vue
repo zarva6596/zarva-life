@@ -3,7 +3,12 @@ import type { CvRole } from '~/composables/useCvRole'
 
 const { t } = useI18n()
 
-useHead({ title: t('pages.cv.name') })
+useSeoMeta({
+  title: () => t('pages.cv.seo.title'),
+  ogTitle: () => t('pages.cv.seo.title'),
+  description: () => t('pages.cv.seo.description'),
+  ogDescription: () => t('pages.cv.seo.description'),
+})
 
 const activeRole = useCvRole()
 

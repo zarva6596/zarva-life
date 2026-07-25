@@ -1,4 +1,8 @@
 {
+  "seo": {
+    "description": "Особистий сайт Романа Зарванського — Senior Front-end розробника, що спеціалізується на Vue.js, Nuxt.js та React. Резюме, портфоліо, мотопригоди, ембедед розробка, дрони та подорожі.",
+    "keywords": "Роман Зарванський, фронтенд розробник, Vue.js розробник, Nuxt.js розробник, React розробник, TypeScript, JavaScript, веб розробник Україна, remote розробник, full-stack розробник"
+  },
   "common": {
     "experience": {
       "days": "{n} дн.",
@@ -32,6 +36,10 @@
     },
     "cv": {
       "name": "Роман Зарванський",
+      "seo": {
+        "title": "Резюме",
+        "description": "Резюме Романа Зарванського — Senior Front-end розробника з 6+ роками досвіду в Vue.js, Nuxt.js, React та TypeScript. Технічний стек, досвід роботи та портфоліо."
+      },
       "roles": {
         "software": "Senior Software розробник",
         "hardware": "Junior Hardware розробник"

@@ -1,4 +1,8 @@
 {
+  "seo": {
+    "description": "Personal website of Roman Zarvanskyi — Senior Front-end Developer specializing in Vue.js, Nuxt.js, and React. Explore my CV, portfolio, moto adventures, embedded development, drone projects, and travel stories.",
+    "keywords": "Roman Zarvanskyi, front-end developer, Vue.js developer, Nuxt.js developer, React developer, TypeScript, JavaScript, web developer Ukraine, remote developer, full-stack developer, NestJS, software engineer"
+  },
   "common": {
     "experience": {
       "days": "{n} days",
@@ -32,6 +36,10 @@
     },
     "cv": {
       "name": "Roman Zarvanskyi",
+      "seo": {
+        "title": "CV",
+        "description": "CV of Roman Zarvanskyi — Senior Front-end Developer with 6+ years of experience in Vue.js, Nuxt.js, React, and TypeScript. View my tech stack, work experience, and portfolio."
+      },
       "roles": {
         "software": "Senior Software Developer",
         "hardware": "Junior Hardware Developer"

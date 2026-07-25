@@ -1,6 +1,36 @@
 <script setup lang="ts">
 const { t } = useI18n()
 const localePath = useLocalePath()
+const { origin } = useRequestURL()
+
+useHead({
+  titleTemplate: '%s',
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: 'Roman Zarvanskyi',
+        jobTitle: 'Senior Front-end Developer',
+        url: origin,
+        image: 'https://github.com/zarva6596.png',
+        sameAs: ['https://github.com/zarva6596'],
+        knowsAbout: [
+          'Vue.js', 'Nuxt.js', 'React', 'Next.js',
+          'TypeScript', 'JavaScript', 'Node.js', 'NestJS',
+          'TailwindCSS', 'PostgreSQL',
+        ],
+      }),
+    },
+  ],
+})
+
+useSeoMeta({
+  title: 'Roman Zarvanskyi — Front-end Developer',
+  ogTitle: 'Roman Zarvanskyi — Front-end Developer',
+  ogUrl: origin,
+})
 
 const paras = computed(() => [
   t('pages.home.para1'),
