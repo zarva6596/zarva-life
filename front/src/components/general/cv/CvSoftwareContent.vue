@@ -137,7 +137,9 @@ const categories = computed<TechCategory[]>(() => [
 </script>
 
 <template>
-  <div class="flex flex-col items-center px-6 py-4">
+  <div class="flex flex-col items-center gap-8 px-6 py-4">
+    <CvDownload href="/Roman Zarvanskyi CV.pdf" />
+
     <CvSkillsList :primary-tech="primaryTech" :categories="categories" />
   </div>
 </template>

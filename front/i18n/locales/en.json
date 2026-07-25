@@ -29,6 +29,7 @@
         "software": "Senior Software Developer",
         "hardware": "Junior Hardware Developer"
       },
+      "downloadCv": "Download CV",
       "techStack": {
         "showMore": "Show full stack",
         "showLess": "Show less",

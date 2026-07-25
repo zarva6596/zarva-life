@@ -29,6 +29,7 @@
         "software": "Senior Software розробник",
         "hardware": "Junior Hardware розробник"
       },
+      "downloadCv": "Завантажити CV",
       "techStack": {
         "showMore": "Показати повний стек",
         "showLess": "Сховати",
