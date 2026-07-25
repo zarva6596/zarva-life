@@ -15,8 +15,27 @@
     "home": {
       "title": "Home"
     },
-    "work": {
-      "title": "Work & Experience"
+    "cv": {
+      "name": "Roman Zarvanskyi",
+      "position": "Senior Frontend Developer",
+      "techStack": {
+        "showMore": "Show full stack",
+        "showLess": "Show less",
+        "categories": {
+          "fundamentals": "Fundamentals",
+          "ui": "UI Libraries",
+          "css": "CSS & Styling",
+          "state": "State Management",
+          "build": "Build Tools",
+          "testing": "Testing",
+          "vcs": "Version Control & CI/CD",
+          "backend": "Backend & Runtime",
+          "databases": "Databases",
+          "cms": "CMS",
+          "mobile": "Mobile",
+          "devtools": "Dev Tools"
+        }
+      }
     },
     "moto": {
       "title": "Motorcycles"

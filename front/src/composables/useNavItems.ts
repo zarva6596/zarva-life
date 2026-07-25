@@ -11,7 +11,7 @@ export const useNavItems = () => {
   ])
 
   const navItems = computed(() => [
-    { id: 'cv', label: t('nav.cv'), to: localePath('/work') },
+    { id: 'cv', label: t('nav.cv'), to: localePath('/cv') },
     { id: 'hobbies', label: t('nav.hobbies'), items: hobbiesItems.value },
     { id: 'blog', label: t('nav.blog'), to: localePath('/blog') },
     { id: 'shop', label: t('nav.shop'), to: localePath('/shop') },

@@ -10,7 +10,7 @@ export default defineNuxtConfig({
 
   srcDir: 'src/',
 
-  modules: ['@pinia/nuxt', '@nuxt/eslint', '@nuxtjs/i18n'],
+  modules: ['@pinia/nuxt', '@nuxt/eslint', '@nuxtjs/i18n', '@nuxt/icon'],
 
   i18n: {
     locales: [
