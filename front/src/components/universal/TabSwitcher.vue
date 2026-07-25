@@ -23,7 +23,7 @@ function toggle() {
 <template>
   <div class="font-semibold w-full flex justify-center">
     <div
-      class="relative flex cursor-pointer justify-center md:hidden"
+      class="relative flex cursor-pointer justify-center md:hidden w-full"
       style="height: 50px"
       @click="toggle"
     >
