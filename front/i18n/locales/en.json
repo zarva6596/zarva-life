@@ -21,7 +21,14 @@
   },
   "pages": {
     "home": {
-      "title": "Home"
+      "title": "Home",
+      "greeting": "Hi there. 👋",
+      "intro": "Great to have you on my personal website — it's still a work in progress, but if you're looking for a developer, feel free to check out my",
+      "cvLink": "CV page",
+      "para1": "This is more than just a portfolio — it's a window into who I am beyond the code. 👨‍💻 I'm Roman, a Senior Front-end Developer with 6+ years of commercial experience, but also a motorcycle enthusiast, an electronics tinkerer, a drone builder, and a traveler.",
+      "para2": "I created this site because I wanted a place that reflects not just my technical skills, but my personality and passions. 🔥 The best developers aren't only great at writing code — they're curious, creative, and constantly exploring new things. That's the kind of developer I strive to be.",
+      "para3": "Soon you'll find dedicated pages for my moto adventures 🏍️, embedded & hardware development ⚙️, drone projects 🚁, travel stories ✈️, a blog with thoughts and insights 📝, and even a shop with my own products 🛍️. Stick around — it's going to be interesting!",
+      "outro": "Thanks for stopping by. ))"
     },
     "cv": {
       "name": "Roman Zarvanskyi",
