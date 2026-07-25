@@ -1,20 +1,21 @@
 <script setup lang="ts">
 const props = defineProps<{
   startDate: string
+  endDate?: string
 }>()
 
 const { t } = useI18n()
 
 const experience = computed(() => {
   const start = new Date(props.startDate)
-  const now = new Date()
+  const end = props.endDate ? new Date(props.endDate) : new Date()
 
   const totalMonths =
-    (now.getFullYear() - start.getFullYear()) * 12 +
-    (now.getMonth() - start.getMonth())
+    (end.getFullYear() - start.getFullYear()) * 12 +
+    (end.getMonth() - start.getMonth())
 
   if (totalMonths < 1) {
-    const days = Math.floor((now.getTime() - start.getTime()) / 86_400_000)
+    const days = Math.floor((end.getTime() - start.getTime()) / 86_400_000)
     return t('common.experience.days', { n: days })
   }
 

@@ -1,20 +1,9 @@
 <script setup lang="ts">
-export interface TechItem {
-  icon?: string
-  name: string
-  stars?: number
-  labelHidden?: boolean
-}
-
-export interface TechCategory {
-  key: string
-  label: string
-  items: TechItem[]
-}
+import type { CvTechItem, CvTechCategory } from '~/types/cv'
 
 defineProps<{
-  primaryTech: TechItem[]
-  categories: TechCategory[]
+  primaryTech: CvTechItem[]
+  categories: CvTechCategory[]
 }>()
 
 const { t } = useI18n()
