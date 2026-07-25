@@ -1,4 +1,12 @@
 {
+  "common": {
+    "experience": {
+      "days": "{n} дн.",
+      "months": "{n} міс.",
+      "years": "{n} рр.",
+      "yearsAndMonths": "{years} рр. {months} міс."
+    }
+  },
   "nav": {
     "home": "Головна",
     "cv": "Резюме",
@@ -17,7 +25,10 @@
     },
     "cv": {
       "name": "Роман Зарванський",
-      "position": "Senior Frontend розробник",
+      "roles": {
+        "software": "Senior Software розробник",
+        "hardware": "Junior Hardware розробник"
+      },
       "techStack": {
         "showMore": "Показати повний стек",
         "showLess": "Сховати",

@@ -1,4 +1,12 @@
 {
+  "common": {
+    "experience": {
+      "days": "{n} days",
+      "months": "{n} mo",
+      "years": "{n} yrs",
+      "yearsAndMonths": "{years} yrs {months} mo"
+    }
+  },
   "nav": {
     "home": "Home",
     "cv": "CV",
@@ -17,7 +25,10 @@
     },
     "cv": {
       "name": "Roman Zarvanskyi",
-      "position": "Senior Frontend Developer",
+      "roles": {
+        "software": "Senior Software Developer",
+        "hardware": "Junior Hardware Developer"
+      },
       "techStack": {
         "showMore": "Show full stack",
         "showLess": "Show less",

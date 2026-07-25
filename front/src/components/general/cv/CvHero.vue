@@ -1,5 +1,20 @@
 <script setup lang="ts">
 const { t } = useI18n()
+
+const activeRole = useCvRole()
+
+const tabs = computed(() => [
+  {
+    key: 'software',
+    label: t('pages.cv.roles.software'),
+    startDate: '2020-06-24',
+  },
+  {
+    key: 'hardware',
+    label: t('pages.cv.roles.hardware'),
+    startDate: '2026-07-01',
+  },
+])
 </script>
 
 <template>
@@ -10,13 +25,11 @@ const { t } = useI18n()
       class="mb-6 size-40 rounded-full object-cover ring-4 ring-gray-100"
     >
 
-    <h1 class="mb-2 text-4xl font-bold text-gray-900">
+    <h1 class="mb-4 text-4xl font-bold text-gray-900">
       {{ t('pages.cv.name') }}
     </h1>
 
-    <p class="mb-8 text-xl text-gray-500">
-      {{ t('pages.cv.position') }}
-    </p>
+    <TabSwitcher :model-value="activeRole" :tabs="tabs" class="mb-8" @update:model-value="(val) => activeRole = val" />
 
     <CvTechStack />
   </section>
