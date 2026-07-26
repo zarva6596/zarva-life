@@ -180,6 +180,25 @@
           }
         }
       },
+      "contact": {
+        "button": "Contact me",
+        "title": "Get in touch",
+        "subtitle": "Fill out the form and I'll get back to you as soon as possible.",
+        "name": "Your name",
+        "email": "Your email",
+        "message": "Message",
+        "submit": "Send message",
+        "sending": "Sending...",
+        "success": "Message sent! I'll get back to you soon.",
+        "error": "Something went wrong. Please try again.",
+        "validation": {
+          "nameRequired": "Name is required",
+          "emailRequired": "Email is required",
+          "emailInvalid": "Please enter a valid email",
+          "messageRequired": "Message is required",
+          "messageMin": "Message must be at least 10 characters"
+        }
+      },
       "downloadCv": "Download CV",
       "techStack": {
         "showMore": "Show full stack",
