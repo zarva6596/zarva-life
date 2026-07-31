@@ -42,9 +42,13 @@ const emit = defineEmits<{
 
           <div class="flex items-center gap-2">
             <span>{{ props.experience.location }}</span>
+
             <span>·</span>
+
             <span>{{ props.experience.remote }}</span>
+
             <span>·</span>
+
             <span>{{ props.experience.type }}</span>
           </div>
         </div>
