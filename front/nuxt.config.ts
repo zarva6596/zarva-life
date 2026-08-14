@@ -12,6 +12,12 @@ export default defineNuxtConfig({
 
   modules: ['@pinia/nuxt', '@nuxt/eslint', '@nuxtjs/i18n', '@nuxt/icon'],
 
+  runtimeConfig: {
+    gmailUser: '',
+    gmailAppPassword: '',
+    contactToEmail: '',
+  },
+
   app: {
     head: {
       charset: 'utf-8',
