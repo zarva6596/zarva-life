@@ -6,8 +6,10 @@ const props = defineProps<{
   labelHidden?: boolean
 }>()
 
+const DEFAULT_RATING_COLORS: [string, string] = ['#ef4444', '#dc2626']
+
 const ratingColors: Record<number, [string, string]> = {
-  0: ['#ef4444', '#dc2626'],
+  0: DEFAULT_RATING_COLORS,
   1: ['#f97316', '#ea580c'],
   2: ['#fb923c', '#f97316'],
   3: ['#eab308', '#ca8a04'],
@@ -17,7 +19,7 @@ const ratingColors: Record<number, [string, string]> = {
 
 const barStyle = computed(() => {
   if (props.stars === undefined) return {}
-  const [from, to] = ratingColors[props.stars] ?? ratingColors[0]
+  const [from, to] = ratingColors[props.stars] ?? DEFAULT_RATING_COLORS
   return {
     width: `${(props.stars / 5) * 100}%`,
     background: `linear-gradient(to right, ${from}, ${to})`,

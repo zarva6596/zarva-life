@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { t } = useI18n()
-const localeHead = useLocaleHead({ addDirAttribute: true, addSeoAttributes: true })
+const localeHead = useLocaleHead({ dir: true, seo: true })
 
 useHead(localeHead)
 
