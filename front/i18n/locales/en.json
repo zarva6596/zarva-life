@@ -24,6 +24,50 @@
     "shop": "Shop"
   },
   "pages": {
+    "admin": {
+      "nav": {
+        "overview": "Overview"
+      },
+      "overview": {
+        "title": "Overview",
+        "welcome": "Hi, {email}!"
+      },
+      "logout": "Log out"
+    },
+    "auth": {
+      "login": {
+        "title": "Log In",
+        "subtitle": "Sign in to your account",
+        "email": "Email",
+        "password": "Password",
+        "submit": "Log In",
+        "submitting": "Logging in...",
+        "noAccount": "Don't have an account?",
+        "registerLink": "Register",
+        "validation": {
+          "emailRequired": "Email is required",
+          "emailInvalid": "Please enter a valid email",
+          "passwordRequired": "Password is required"
+        }
+      },
+      "register": {
+        "title": "Register",
+        "subtitle": "Create a new account",
+        "name": "Your name",
+        "email": "Email",
+        "password": "Password",
+        "submit": "Register",
+        "submitting": "Registering...",
+        "hasAccount": "Already have an account?",
+        "loginLink": "Log in",
+        "validation": {
+          "emailRequired": "Email is required",
+          "emailInvalid": "Please enter a valid email",
+          "passwordRequired": "Password is required",
+          "passwordMin": "Password must be at least 8 characters"
+        }
+      }
+    },
     "home": {
       "title": "Home",
       "greeting": "Hi there. 👋",

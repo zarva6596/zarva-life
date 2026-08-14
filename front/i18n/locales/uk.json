@@ -24,6 +24,50 @@
     "shop": "Магазин"
   },
   "pages": {
+    "admin": {
+      "nav": {
+        "overview": "Огляд"
+      },
+      "overview": {
+        "title": "Огляд",
+        "welcome": "Привіт, {email}!"
+      },
+      "logout": "Вийти"
+    },
+    "auth": {
+      "login": {
+        "title": "Вхід",
+        "subtitle": "Увійдіть у свій акаунт",
+        "email": "Email",
+        "password": "Пароль",
+        "submit": "Увійти",
+        "submitting": "Вхід...",
+        "noAccount": "Немає акаунта?",
+        "registerLink": "Зареєструватись",
+        "validation": {
+          "emailRequired": "Email обовʼязковий",
+          "emailInvalid": "Введіть коректний email",
+          "passwordRequired": "Пароль обовʼязковий"
+        }
+      },
+      "register": {
+        "title": "Реєстрація",
+        "subtitle": "Створіть новий акаунт",
+        "name": "Ваше імʼя",
+        "email": "Email",
+        "password": "Пароль",
+        "submit": "Зареєструватись",
+        "submitting": "Реєстрація...",
+        "hasAccount": "Вже є акаунт?",
+        "loginLink": "Увійти",
+        "validation": {
+          "emailRequired": "Email обовʼязковий",
+          "emailInvalid": "Введіть коректний email",
+          "passwordRequired": "Пароль обовʼязковий",
+          "passwordMin": "Пароль має містити щонайменше 8 символів"
+        }
+      }
+    },
     "home": {
       "title": "Головна",
       "greeting": "Привіт. 👋",

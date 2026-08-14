@@ -16,6 +16,9 @@ export default defineNuxtConfig({
     gmailUser: '',
     gmailAppPassword: '',
     contactToEmail: '',
+    public: {
+      apiBase: '',
+    },
   },
 
   app: {
