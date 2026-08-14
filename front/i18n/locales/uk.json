@@ -200,6 +200,12 @@
         }
       },
       "downloadCv": "Завантажити CV",
+      "portfolio": {
+        "button": "Портфоліо",
+        "software": {
+          "title": "Портфоліо — Software"
+        }
+      },
       "techStack": {
         "showMore": "Показати повний стек",
         "showLess": "Сховати",

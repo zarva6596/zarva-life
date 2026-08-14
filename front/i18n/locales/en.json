@@ -200,6 +200,12 @@
         }
       },
       "downloadCv": "Download CV",
+      "portfolio": {
+        "button": "Portfolio",
+        "software": {
+          "title": "Portfolio — Software"
+        }
+      },
       "techStack": {
         "showMore": "Show full stack",
         "showLess": "Show less",

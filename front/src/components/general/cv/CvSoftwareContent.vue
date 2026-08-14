@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { t } = useI18n()
+const localePath = useLocalePath()
 
 const cvStore = useCvStore()
 
@@ -16,6 +17,8 @@ const categories = computed(() => cvStore.softwareTechCategories(t))
 
     <div class="flex flex-wrap items-center justify-center gap-3">
       <CvDownload href="/Roman Zarvanskyi CV.pdf" />
+
+      <CvPortfolioLink :to="localePath('/cv/portfolio/software')" />
 
       <button
         class="animate-pulse-glow inline-flex items-center gap-2 rounded-full cursor-pointer
