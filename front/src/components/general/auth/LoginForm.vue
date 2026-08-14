@@ -6,6 +6,7 @@ import { z } from 'zod'
 const { t } = useI18n()
 const localePath = useLocalePath()
 const authStore = useAuthStore()
+const notificationsStore = useNotificationsStore()
 
 const schema = computed(() =>
   toTypedSchema(
@@ -37,6 +38,7 @@ const onSubmit = handleSubmit(async (values) => {
   status.value = 'sending'
   try {
     await authStore.login(values)
+    notificationsStore.notify({ type: 'success', description: t('pages.auth.login.successMessage') })
     await navigateTo(localePath('/admin'))
   }
   catch (error) {

@@ -44,7 +44,8 @@
         "title": "Огляд",
         "welcome": "Привіт, {email}!"
       },
-      "logout": "Вийти"
+      "logout": "Вийти",
+      "logoutSuccessMessage": "Ви успішно вийшли"
     },
     "auth": {
       "login": {
@@ -56,6 +57,7 @@
         "submitting": "Вхід...",
         "noAccount": "Немає акаунта?",
         "registerLink": "Зареєструватись",
+        "successMessage": "Ви успішно увійшли",
         "validation": {
           "emailRequired": "Email обовʼязковий",
           "emailInvalid": "Введіть коректний email",
@@ -72,6 +74,7 @@
         "submitting": "Реєстрація...",
         "hasAccount": "Вже є акаунт?",
         "loginLink": "Увійти",
+        "successMessage": "Реєстрація пройшла успішно",
         "validation": {
           "emailRequired": "Email обовʼязковий",
           "emailInvalid": "Введіть коректний email",

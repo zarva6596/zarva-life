@@ -9,9 +9,11 @@ export const useAuthActions = () => {
   const { t } = useI18n()
   const localePath = useLocalePath()
   const authStore = useAuthStore()
+  const notificationsStore = useNotificationsStore()
 
   const onLogout = async () => {
     await authStore.logout()
+    notificationsStore.notify({ type: 'success', description: t('pages.admin.logoutSuccessMessage') })
     await navigateTo(localePath('/login'))
   }
 

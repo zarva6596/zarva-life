@@ -44,7 +44,8 @@
         "title": "Overview",
         "welcome": "Hi, {email}!"
       },
-      "logout": "Log out"
+      "logout": "Log out",
+      "logoutSuccessMessage": "You have successfully logged out"
     },
     "auth": {
       "login": {
@@ -56,6 +57,7 @@
         "submitting": "Logging in...",
         "noAccount": "Don't have an account?",
         "registerLink": "Register",
+        "successMessage": "You have successfully logged in",
         "validation": {
           "emailRequired": "Email is required",
           "emailInvalid": "Please enter a valid email",
@@ -72,6 +74,7 @@
         "submitting": "Registering...",
         "hasAccount": "Already have an account?",
         "loginLink": "Log in",
+        "successMessage": "Registration successful",
         "validation": {
           "emailRequired": "Email is required",
           "emailInvalid": "Please enter a valid email",
