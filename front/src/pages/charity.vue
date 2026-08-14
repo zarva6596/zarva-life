@@ -3,5 +3,5 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <ComingSoon :title="t('nav.drones')" />
+  <ComingSoon :title="t('nav.charity')" />
 </template>

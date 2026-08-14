@@ -5,7 +5,7 @@ export const useNavItems = () => {
   const hobbiesItems = computed(() => [
     { key: 'moto', to: localePath('/moto'), label: t('nav.moto') },
     { key: 'embedded', to: localePath('/embedded'), label: t('nav.embedded') },
-    { key: 'drones', to: localePath('/drones'), label: t('nav.drones') },
+    { key: 'charity', to: localePath('/charity'), label: t('nav.charity') },
     { key: 'travel', to: localePath('/travel'), label: t('nav.travel') },
     { key: 'products', to: localePath('/products'), label: t('nav.products') },
   ])
