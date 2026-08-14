@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: zarva
+      POSTGRES_PASSWORD: zarva
+      POSTGRES_DB: zarva_life
+    ports:
+      - '5434:5432'
+    volumes:
+      - zarva_life_postgres:/var/lib/postgresql/data
+
+volumes:
+  zarva_life_postgres:
