@@ -22,7 +22,10 @@ const categories = computed(() => cvStore.softwareTechCategories(t))
           border border-transparent bg-[#6a9140] px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#5a7a36]"
         @click="contactOpen = true"
       >
-        <Icon name="lucide:mail" class="size-4" />
+        <Icon
+          name="lucide:mail"
+          class="size-4"
+        />
 
         {{ t('pages.cv.contact.button') }}
       </button>
@@ -37,7 +40,10 @@ const categories = computed(() => cvStore.softwareTechCategories(t))
       <CvContactForm @success="contactOpen = false" />
     </AppDialog>
 
-    <CvSkillsList :primary-tech="cvStore.softwarePrimaryTech" :categories="categories" />
+    <CvSkillsList
+      :primary-tech="cvStore.softwarePrimaryTech"
+      :categories="categories"
+    />
 
     <CvExperienceSection :experience="cvStore.softwareExperience" />
   </div>

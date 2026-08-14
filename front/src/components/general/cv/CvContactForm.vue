@@ -81,11 +81,17 @@ const onSubmit = handleSubmit(async (values) => {
       />
     </FormField>
 
-    <p v-if="status === 'success'" class="text-sm text-green-600">
+    <p
+      v-if="status === 'success'"
+      class="text-sm text-green-600"
+    >
       {{ t('pages.cv.contact.success') }}
     </p>
 
-    <p v-if="status === 'error'" class="text-sm text-red-500">
+    <p
+      v-if="status === 'error'"
+      class="text-sm text-red-500"
+    >
       {{ t('pages.cv.contact.error') }}
     </p>
 

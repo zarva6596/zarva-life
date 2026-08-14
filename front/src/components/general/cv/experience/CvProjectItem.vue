@@ -52,7 +52,10 @@ const { t } = useI18n()
         rel="noopener noreferrer"
         class="shrink-0 text-gray-400 transition-colors hover:text-gray-700"
       >
-        <Icon name="lucide:external-link" class="size-4" />
+        <Icon
+          name="lucide:external-link"
+          class="size-4"
+        />
       </a>
     </div>
 
@@ -65,7 +68,10 @@ const { t } = useI18n()
       {{ project.role }}
     </div>
 
-    <ul v-if="project.achievements.length" class="mb-3 space-y-1">
+    <ul
+      v-if="project.achievements.length"
+      class="mb-3 space-y-1"
+    >
       <li
         v-for="(achievement, index) in project.achievements"
         :key="index"
@@ -86,12 +92,18 @@ const { t } = useI18n()
         :src="photo"
         :alt="`${project.name ?? 'Project'} screenshot ${index + 1}`"
         class="h-32 w-auto shrink-0 rounded-md object-cover"
-      />
+      >
     </div>
 
     <div class="flex flex-wrap items-center gap-2">
-      <div v-if="project.teamSize" class="flex items-center gap-1 text-xs text-gray-400">
-        <Icon name="lucide:users" class="size-3.5" />
+      <div
+        v-if="project.teamSize"
+        class="flex items-center gap-1 text-xs text-gray-400"
+      >
+        <Icon
+          name="lucide:users"
+          class="size-3.5"
+        />
         {{ project.teamSize }}
       </div>
 

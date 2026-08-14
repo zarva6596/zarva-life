@@ -24,7 +24,10 @@ const emit = defineEmits<{
         v-if="open"
         class="fixed inset-0 z-50 flex items-center justify-center p-4"
       >
-        <div class="absolute inset-0 bg-[#6a9140]/20 backdrop-blur-md" @click="emit('close')" />
+        <div
+          class="absolute inset-0 bg-[#6a9140]/20 backdrop-blur-md"
+          @click="emit('close')"
+        />
 
         <Transition
           enter-active-class="transition duration-200 ease-out"
@@ -42,7 +45,10 @@ const emit = defineEmits<{
               <div>
                 <h2 class="text-lg font-semibold text-gray-900">{{ title }}</h2>
 
-                <p v-if="subtitle" class="mt-1 text-sm text-gray-500">{{ subtitle }}</p>
+                <p
+                  v-if="subtitle"
+                  class="mt-1 text-sm text-gray-500"
+                >{{ subtitle }}</p>
               </div>
 
               <button
@@ -50,7 +56,10 @@ const emit = defineEmits<{
                   text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-700"
                 @click="emit('close')"
               >
-                <Icon name="lucide:x" class="size-5" />
+                <Icon
+                  name="lucide:x"
+                  class="size-5"
+                />
               </button>
             </div>
 

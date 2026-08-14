@@ -18,7 +18,10 @@ const { navItems, hobbiesItems } = useNavItems()
       class="fixed inset-x-0 top-16 z-40 flex flex-col overflow-y-auto bg-white"
       style="height: calc(100dvh - 4rem); padding-bottom: env(safe-area-inset-bottom)"
     >
-      <template v-for="item in navItems" :key="item.id">
+      <template
+        v-for="item in navItems"
+        :key="item.id"
+      >
         <NuxtLink
           v-if="item.to"
           :to="item.to"

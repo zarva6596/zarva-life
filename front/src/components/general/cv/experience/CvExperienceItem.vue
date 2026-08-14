@@ -29,7 +29,10 @@ const emit = defineEmits<{
             class="text-gray-400 hover:text-gray-700"
             @click.stop
           >
-            <Icon name="lucide:external-link" class="size-3.5" />
+            <Icon
+              name="lucide:external-link"
+              class="size-3.5"
+            />
           </a>
         </div>
 
@@ -38,7 +41,10 @@ const emit = defineEmits<{
 
       <div class="flex shrink-0 items-center gap-8">
         <div class="flex flex-col items-end gap-0.5 text-xs text-gray-400">
-          <ExperienceLabel :start-date="props.experience.startDate" :end-date="props.experience.endDate" />
+          <ExperienceLabel
+            :start-date="props.experience.startDate"
+            :end-date="props.experience.endDate"
+          />
 
           <div class="flex items-center gap-2">
             <span>{{ props.experience.location }}</span>
@@ -69,7 +75,10 @@ const emit = defineEmits<{
         <div class="flex flex-col gap-4 py-4">
           <p class="text-sm leading-relaxed text-gray-500">{{ props.experience.description }}</p>
 
-          <ul v-if="props.experience.achievements.length" class="space-y-1">
+          <ul
+            v-if="props.experience.achievements.length"
+            class="space-y-1"
+          >
             <li
               v-for="(achievement, index) in props.experience.achievements"
               :key="index"
@@ -80,7 +89,10 @@ const emit = defineEmits<{
             </li>
           </ul>
 
-          <div v-if="props.experience.projects.length" class="flex flex-col gap-3">
+          <div
+            v-if="props.experience.projects.length"
+            class="flex flex-col gap-3"
+          >
             <CvProjectItem
               v-for="(project, index) in props.experience.projects"
               :key="index"

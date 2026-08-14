@@ -50,7 +50,10 @@ function toggle() {
     </div>
 
     <div class="hidden items-center gap-3 text-xl md:flex">
-      <template v-for="(tab, index) in tabs" :key="tab.key">
+      <template
+        v-for="(tab, index) in tabs"
+        :key="tab.key"
+      >
         <div class="group flex flex-col items-center gap-1">
           <button
             class="cursor-pointer transition-colors"
@@ -67,7 +70,10 @@ function toggle() {
           />
         </div>
 
-        <span v-if="index < tabs.length - 1" class="hidden select-none self-start text-gray-300 md:inline">/</span>
+        <span
+          v-if="index < tabs.length - 1"
+          class="hidden select-none self-start text-gray-300 md:inline"
+        >/</span>
       </template>
     </div>
   </div>

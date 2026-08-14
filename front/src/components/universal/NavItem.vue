@@ -11,7 +11,11 @@ withDefaults(defineProps<{
 </script>
 
 <template>
-  <NuxtLink :to="to" custom v-slot="{ navigate, href }">
+  <NuxtLink
+    v-slot="{ navigate, href }"
+    :to="to"
+    custom
+  >
     <a
       :href="href ?? undefined"
       class="flex h-full items-center px-3 font-medium tracking-wide transition-colors duration-500 hover:bg-black hover:text-white"

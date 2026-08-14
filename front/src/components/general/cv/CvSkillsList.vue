@@ -29,12 +29,18 @@ const showAll = ref(false)
       leave-from-class="opacity-100 translate-y-0"
       leave-to-class="opacity-0 -translate-y-2"
     >
-      <div v-if="showAll" class="flex w-full flex-col items-center gap-6">
+      <div
+        v-if="showAll"
+        class="flex w-full flex-col items-center gap-6"
+      >
         <button
           class="flex items-center gap-1.5 text-sm text-gray-400 transition-colors hover:text-gray-700"
           @click="showAll = false"
         >
-          <Icon name="lucide:chevron-up" class="size-4" />
+          <Icon
+            name="lucide:chevron-up"
+            class="size-4"
+          />
 
           <span>{{ t('pages.cv.techStack.showLess') }}</span>
         </button>
