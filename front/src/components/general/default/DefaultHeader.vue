@@ -11,7 +11,13 @@ const menuOpen = ref(false)
 
       <DefaultNav :key="locale" />
 
-      <LangSwitcher />
+      <div class="flex items-center gap-4 self-center">
+        <LangSwitcher />
+
+        <div class="h-4 w-px bg-gray-200" />
+
+        <HeaderAuthActions />
+      </div>
     </div>
 
     <div class="relative flex h-full items-center md:hidden">

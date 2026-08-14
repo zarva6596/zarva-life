@@ -2,6 +2,12 @@
 const isOpen = defineModel<boolean>({ default: false })
 
 const { navItems, hobbiesItems } = useNavItems()
+const { authActions } = useAuthActions()
+
+const onActionClick = async (action: { onClick?: () => void | Promise<void> }) => {
+  await action.onClick?.()
+  isOpen.value = false
+}
 </script>
 
 <template>
@@ -50,6 +56,30 @@ const { navItems, hobbiesItems } = useNavItems()
             {{ sub.label }}
           </NuxtLink>
         </template>
+      </template>
+
+      <template
+        v-for="action in authActions"
+        :key="action.key"
+      >
+        <NuxtLink
+          v-if="action.to"
+          :to="action.to"
+          class="border-b border-gray-100 px-6 py-4 text-base font-medium uppercase tracking-wide transition-colors duration-200 hover:bg-gray-50"
+          active-class="text-black"
+          inactive-class="text-black"
+          @click="isOpen = false"
+        >
+          {{ action.label }}
+        </NuxtLink>
+
+        <button
+          v-else
+          class="cursor-pointer border-b border-gray-100 px-6 py-4 text-left text-base font-medium uppercase tracking-wide transition-colors duration-200 hover:bg-gray-50"
+          @click="onActionClick(action)"
+        >
+          {{ action.label }}
+        </button>
       </template>
     </div>
   </Transition>

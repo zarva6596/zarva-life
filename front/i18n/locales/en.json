@@ -11,6 +11,14 @@
       "yearsAndMonths": "{years} yrs {months} mo"
     }
   },
+  "notifications": {
+    "types": {
+      "success": "Success",
+      "info": "Info",
+      "error": "Error",
+      "warning": "Warning"
+    }
+  },
   "nav": {
     "home": "Home",
     "cv": "CV",
@@ -21,7 +29,11 @@
     "travel": "Travel",
     "products": "My Products",
     "blog": "Blog",
-    "shop": "Shop"
+    "shop": "Shop",
+    "login": "Log in",
+    "signup": "Sign Up",
+    "dashboard": "Dashboard",
+    "logout": "Log out"
   },
   "pages": {
     "admin": {

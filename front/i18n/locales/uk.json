@@ -11,6 +11,14 @@
       "yearsAndMonths": "{years} рр. {months} міс."
     }
   },
+  "notifications": {
+    "types": {
+      "success": "Успіх",
+      "info": "Інформація",
+      "error": "Помилка",
+      "warning": "Попередження"
+    }
+  },
   "nav": {
     "home": "Головна",
     "cv": "Резюме",
@@ -21,7 +29,11 @@
     "travel": "Подорожі",
     "products": "Мої продукти",
     "blog": "Блог",
-    "shop": "Магазин"
+    "shop": "Магазин",
+    "login": "Увійти",
+    "signup": "Реєстрація",
+    "dashboard": "Дашборд",
+    "logout": "Вийти"
   },
   "pages": {
     "admin": {

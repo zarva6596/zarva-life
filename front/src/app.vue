@@ -16,4 +16,6 @@ useSeoMeta({
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
+
+  <AppNotifications />
 </template>
