@@ -3,7 +3,7 @@ const notificationsStore = useNotificationsStore()
 </script>
 
 <template>
-  <div class="pointer-events-none fixed right-4 top-4 z-[100] flex w-full max-w-xs flex-col gap-3">
+  <div class="pointer-events-none fixed right-4 top-20 z-[100] flex w-full max-w-xs flex-col gap-3">
     <TransitionGroup
       enter-active-class="transition-all duration-300 ease-out"
       enter-from-class="opacity-0 translate-x-4"
