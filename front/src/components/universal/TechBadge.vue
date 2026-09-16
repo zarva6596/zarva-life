@@ -28,7 +28,7 @@ const barStyle = computed(() => {
 </script>
 
 <template>
-  <div class="relative flex items-center gap-2 overflow-hidden rounded-full border border-gray-200 bg-white px-4 py-2 shadow-sm">
+  <div class="relative flex items-center gap-2 overflow-hidden rounded-full border border-border bg-surface px-4 py-2 shadow-sm">
     <Icon
       v-if="icon"
       :name="icon"
@@ -37,11 +37,11 @@ const barStyle = computed(() => {
 
     <span
       v-if="!labelHidden"
-      class="text-sm font-medium text-gray-700"
+      class="text-sm font-medium text-ink-secondary"
     >{{ name }}</span>
 
     <template v-if="stars !== undefined">
-      <div class="absolute bottom-0 left-0 right-0 h-0.5 bg-gray-100" />
+      <div class="absolute bottom-0 left-0 right-0 h-0.5 bg-surface-tertiary" />
 
       <div
         class="absolute bottom-0 left-0 h-0.5"

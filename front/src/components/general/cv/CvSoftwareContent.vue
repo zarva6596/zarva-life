@@ -22,7 +22,7 @@ const categories = computed(() => cvStore.softwareTechCategories(t))
 
       <button
         class="animate-pulse-glow inline-flex items-center gap-2 rounded-full cursor-pointer
-          border border-transparent bg-[#6a9140] px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#5a7a36]"
+          border border-transparent bg-accent px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-accent-hover"
         @click="contactOpen = true"
       >
         <Icon

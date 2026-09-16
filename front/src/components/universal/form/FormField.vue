@@ -9,7 +9,7 @@ defineProps<{
   <div class="flex flex-col gap-1">
     <label
       v-if="label"
-      class="text-sm font-medium text-gray-700"
+      class="text-sm font-medium text-ink-secondary"
     >{{ label }}</label>
 
     <slot />

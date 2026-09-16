@@ -9,15 +9,15 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <div class="rounded-lg border border-gray-100 bg-gray-50 p-4">
+  <div class="rounded-lg border border-border-subtle bg-surface-secondary p-4">
     <div class="mb-2 flex items-start justify-between gap-2">
       <div class="flex items-baseline gap-2">
-        <span class="font-medium text-gray-700">
+        <span class="font-medium text-ink-secondary">
           {{ project.name ?? 'Under NDA' }}
         </span>
 
         <template v-if="project.link || project.github">
-          <span class="text-xs text-gray-300">·</span>
+          <span class="text-xs text-ink-faintest">·</span>
 
           <a
             v-if="project.link"
@@ -30,7 +30,7 @@ const { t } = useI18n()
           </a>
 
           <template v-if="project.link && project.github">
-            <span class="text-xs text-gray-300">·</span>
+            <span class="text-xs text-ink-faintest">·</span>
           </template>
 
           <a
@@ -50,7 +50,7 @@ const { t } = useI18n()
         :href="project.link"
         target="_blank"
         rel="noopener noreferrer"
-        class="shrink-0 text-gray-400 transition-colors hover:text-gray-700"
+        class="shrink-0 text-ink-faint transition-colors hover:text-ink-secondary"
       >
         <Icon
           name="lucide:external-link"
@@ -59,12 +59,12 @@ const { t } = useI18n()
       </a>
     </div>
 
-    <p class="mb-3 text-sm leading-relaxed text-gray-500">
+    <p class="mb-3 text-sm leading-relaxed text-ink-muted">
       {{ project.description }}
     </p>
 
-    <div class="mb-3 text-sm text-gray-500">
-      <span class="font-medium text-gray-600">Role:</span>
+    <div class="mb-3 text-sm text-ink-muted">
+      <span class="font-medium text-ink-muted">Role:</span>
       {{ project.role }}
     </div>
 
@@ -75,9 +75,9 @@ const { t } = useI18n()
       <li
         v-for="(achievement, index) in project.achievements"
         :key="index"
-        class="flex gap-2 text-sm text-gray-500"
+        class="flex gap-2 text-sm text-ink-muted"
       >
-        <span class="mt-1.5 size-1.5 shrink-0 rounded-full bg-gray-300" />
+        <span class="mt-1.5 size-1.5 shrink-0 rounded-full bg-surface-tertiary" />
         {{ achievement }}
       </li>
     </ul>
@@ -98,7 +98,7 @@ const { t } = useI18n()
     <div class="flex flex-wrap items-center gap-2">
       <div
         v-if="project.teamSize"
-        class="flex items-center gap-1 text-xs text-gray-400"
+        class="flex items-center gap-1 text-xs text-ink-faint"
       >
         <Icon
           name="lucide:users"
@@ -110,7 +110,7 @@ const { t } = useI18n()
       <span
         v-for="tech in project.tech"
         :key="tech"
-        class="rounded-full bg-gray-200 px-2 py-0.5 text-xs text-gray-600"
+        class="rounded-full bg-surface-tertiary px-2 py-0.5 text-xs text-ink-muted"
       >
         {{ tech }}
       </span>

@@ -7,10 +7,10 @@ const { t } = useI18n()
     <img
       src="https://github.com/zarva6596.png"
       alt="Roman Zarvanskyi"
-      class="mb-6 size-40 rounded-full object-cover ring-4 ring-gray-100"
+      class="mb-6 size-40 rounded-full object-cover ring-4 ring-border-subtle"
     >
 
-    <h1 class="text-4xl font-bold text-gray-900">
+    <h1 class="text-4xl font-bold text-ink">
       {{ t('pages.cv.name') }}
     </h1>
   </section>

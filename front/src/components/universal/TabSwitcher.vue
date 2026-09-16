@@ -37,7 +37,7 @@ function toggle() {
       >
         <span
           class="text-base/5 transition-colors whitespace-nowrap"
-          :class="tab.key === modelValue ? 'text-gray-900' : 'text-gray-400'"
+          :class="tab.key === modelValue ? 'text-ink' : 'text-ink-faint'"
         >
           {{ tab.label }}
         </span>
@@ -57,7 +57,7 @@ function toggle() {
         <div class="group flex flex-col items-center gap-1">
           <button
             class="cursor-pointer transition-colors"
-            :class="tab.key === modelValue ? 'text-gray-900' : 'text-gray-300 hover:text-gray-500'"
+            :class="tab.key === modelValue ? 'text-ink' : 'text-ink-faintest hover:text-ink-muted'"
             @click="emit('update:modelValue', tab.key)"
           >
             {{ tab.label }}
@@ -72,7 +72,7 @@ function toggle() {
 
         <span
           v-if="index < tabs.length - 1"
-          class="hidden select-none self-start text-gray-300 md:inline"
+          class="hidden select-none self-start text-ink-faintest md:inline"
         >/</span>
       </template>
     </div>

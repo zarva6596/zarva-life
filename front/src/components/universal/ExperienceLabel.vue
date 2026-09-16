@@ -29,5 +29,5 @@ const experience = computed(() => {
 </script>
 
 <template>
-  <span class="text-xs font-light italic text-gray-400">{{ experience }}</span>
+  <span class="text-xs font-light italic text-ink-faint">{{ experience }}</span>
 </template>

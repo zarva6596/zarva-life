@@ -25,7 +25,7 @@ const emit = defineEmits<{
         class="fixed inset-0 z-50 flex items-center justify-center p-4"
       >
         <div
-          class="absolute inset-0 bg-[#6a9140]/20 backdrop-blur-md"
+          class="absolute inset-0 bg-accent/20 backdrop-blur-md"
           @click="emit('close')"
         />
 
@@ -39,21 +39,21 @@ const emit = defineEmits<{
         >
           <div
             v-if="open"
-            class="relative z-10 w-full max-w-md rounded-2xl bg-white p-6 shadow-xl"
+            class="relative z-10 w-full max-w-md rounded-2xl bg-surface p-6 shadow-xl"
           >
             <div class="mb-5 flex items-start justify-between gap-4">
               <div>
-                <h2 class="text-lg font-semibold text-gray-900">{{ title }}</h2>
+                <h2 class="text-lg font-semibold text-ink">{{ title }}</h2>
 
                 <p
                   v-if="subtitle"
-                  class="mt-1 text-sm text-gray-500"
+                  class="mt-1 text-sm text-ink-muted"
                 >{{ subtitle }}</p>
               </div>
 
               <button
                 class="cursor-pointer shrink-0 rounded-full size-7 flex items-center justify-center
-                  text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-700"
+                  text-ink-faint transition-colors hover:bg-surface-tertiary hover:text-ink-secondary"
                 @click="emit('close')"
               >
                 <Icon

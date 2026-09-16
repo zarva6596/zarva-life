@@ -5,16 +5,18 @@ const { onLogout } = useAuthActions()
 </script>
 
 <template>
-  <header class="flex w-full items-center justify-between border-b border-gray-200 bg-white px-6 py-4">
+  <header class="flex w-full items-center justify-between border-b border-border bg-surface px-6 py-4">
     <AppLogo />
 
     <div class="flex items-center gap-4">
-      <span class="text-sm text-gray-500">{{ authStore.user?.email }}</span>
+      <span class="text-sm text-ink-muted">{{ authStore.user?.email }}</span>
 
-      <LangSwitcher variant="dashboard" />
+      <LangSwitcher />
+
+      <ThemeToggle />
 
       <button
-        class="cursor-pointer text-sm font-medium text-gray-700 transition-colors hover:text-black"
+        class="cursor-pointer text-sm font-medium text-ink-secondary transition-colors hover:text-ink"
         @click="onLogout"
       >
         {{ t('pages.admin.logout') }}

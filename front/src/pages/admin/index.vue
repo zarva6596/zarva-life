@@ -10,11 +10,11 @@ const authStore = useAuthStore()
 
 <template>
   <div class="flex flex-col gap-2 px-6 py-8">
-    <h1 class="text-2xl font-bold text-gray-900">
+    <h1 class="text-2xl font-bold text-ink">
       {{ t('pages.admin.overview.title') }}
     </h1>
 
-    <p class="text-gray-500">
+    <p class="text-ink-muted">
       {{ t('pages.admin.overview.welcome', { email: authStore.user?.email }) }}
     </p>
   </div>

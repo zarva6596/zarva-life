@@ -10,7 +10,11 @@ export default defineNuxtConfig({
 
   srcDir: 'src/',
 
-  modules: ['@pinia/nuxt', '@nuxt/eslint', '@nuxtjs/i18n', '@nuxt/icon'],
+  modules: ['@pinia/nuxt', '@nuxt/eslint', '@nuxtjs/i18n', '@nuxt/icon', '@nuxtjs/color-mode'],
+
+  colorMode: {
+    classSuffix: '',
+  },
 
   runtimeConfig: {
     gmailUser: '',

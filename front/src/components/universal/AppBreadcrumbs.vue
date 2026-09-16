@@ -11,7 +11,7 @@ defineProps<{
 
 <template>
   <nav aria-label="Breadcrumb">
-    <ol class="flex flex-wrap items-center gap-2 text-sm text-gray-500">
+    <ol class="flex flex-wrap items-center gap-2 text-sm text-ink-muted">
       <template
         v-for="(item, index) in items"
         :key="item.label"
@@ -25,7 +25,7 @@ defineProps<{
 
         <li
           v-if="index < items.length - 1"
-          class="select-none text-gray-300"
+          class="select-none text-ink-faintest"
           aria-hidden="true"
         >
           /

@@ -10,10 +10,10 @@ defineEmits<{
 }>()
 
 const typeStyles: Record<NotificationType, { border: string, bg: string, text: string, icon: string }> = {
-  success: { border: 'border-green-500', bg: 'bg-green-50', text: 'text-green-700', icon: 'lucide:check-circle' },
-  info: { border: 'border-blue-500', bg: 'bg-blue-50', text: 'text-blue-700', icon: 'lucide:info' },
-  error: { border: 'border-red-500', bg: 'bg-red-50', text: 'text-red-700', icon: 'lucide:x-circle' },
-  warning: { border: 'border-amber-500', bg: 'bg-amber-50', text: 'text-amber-700', icon: 'lucide:alert-triangle' },
+  success: { border: 'border-success-border', bg: 'bg-success-bg', text: 'text-success-text', icon: 'lucide:check-circle' },
+  info: { border: 'border-info-border', bg: 'bg-info-bg', text: 'text-info-text', icon: 'lucide:info' },
+  error: { border: 'border-error-border', bg: 'bg-error-bg', text: 'text-error-text', icon: 'lucide:x-circle' },
+  warning: { border: 'border-warning-border', bg: 'bg-warning-bg', text: 'text-warning-text', icon: 'lucide:alert-triangle' },
 }
 </script>
 
@@ -38,14 +38,14 @@ const typeStyles: Record<NotificationType, { border: string, bg: string, text: s
 
       <p
         v-if="notification.description"
-        class="mt-1 text-sm text-gray-600"
+        class="mt-1 text-sm text-ink-muted"
       >
         {{ notification.description }}
       </p>
     </div>
 
     <button
-      class="cursor-pointer text-gray-400 transition-colors hover:text-gray-700"
+      class="cursor-pointer text-ink-faint transition-colors hover:text-ink-secondary"
       @click="$emit('close')"
     >
       <Icon

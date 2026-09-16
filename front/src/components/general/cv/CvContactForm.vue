@@ -100,8 +100,8 @@ const onSubmit = handleSubmit(async (values) => {
       :disabled="!isReady"
       class="inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium text-white transition-all duration-300"
       :class="isReady
-        ? 'animate-pulse-glow cursor-pointer bg-[#6a9140] hover:bg-[#5a7a36]'
-        : 'cursor-not-allowed bg-gray-300 text-gray-500'"
+        ? 'animate-pulse-glow cursor-pointer bg-accent hover:bg-accent-hover'
+        : 'cursor-not-allowed bg-surface-tertiary text-ink-faint'"
     >
       {{ status === 'sending' ? t('pages.cv.contact.sending') : t('pages.cv.contact.submit') }}
     </button>

@@ -34,7 +34,7 @@ const showAll = ref(false)
         class="flex w-full flex-col items-center gap-6"
       >
         <button
-          class="flex items-center gap-1.5 text-sm text-gray-400 transition-colors hover:text-gray-700"
+          class="flex items-center gap-1.5 text-sm text-ink-faint transition-colors hover:text-ink-secondary"
           @click="showAll = false"
         >
           <Icon
@@ -51,7 +51,7 @@ const showAll = ref(false)
             :key="category.key"
             class="flex flex-col items-center gap-3"
           >
-            <span class="text-xs font-semibold uppercase tracking-widest text-gray-400">
+            <span class="text-xs font-semibold uppercase tracking-widest text-ink-faint">
               {{ category.label }}
             </span>
 
@@ -71,7 +71,7 @@ const showAll = ref(false)
     </Transition>
 
     <button
-      class="flex items-center gap-1.5 text-sm text-gray-400 transition-colors hover:text-gray-700"
+      class="flex items-center gap-1.5 text-sm text-ink-faint transition-colors hover:text-ink-secondary"
       @click="showAll = !showAll"
     >
       <span>{{ showAll ? t('pages.cv.techStack.showLess') : t('pages.cv.techStack.showMore') }}</span>

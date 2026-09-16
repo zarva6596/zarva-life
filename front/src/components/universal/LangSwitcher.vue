@@ -1,9 +1,7 @@
 <script setup lang="ts">
 const props = withDefaults(defineProps<{
-  variant?: 'primary' | 'dashboard'
   compact?: boolean
 }>(), {
-  variant: 'primary',
   compact: false,
 })
 
@@ -23,11 +21,9 @@ const visibleLocales = computed(() =>
       :to="switchLocalePath(loc.code)"
       :class="[
         'text-base font-medium transition-colors',
-        variant === 'primary' && props.compact && 'text-black',
-        variant === 'primary' && !props.compact && locale === loc.code && 'text-black',
-        variant === 'primary' && !props.compact && locale !== loc.code && 'text-gray-400 hover:text-black',
-        variant === 'dashboard' && locale === loc.code && 'text-white',
-        variant === 'dashboard' && locale !== loc.code && 'text-white/40 hover:text-white',
+        compact && 'text-ink',
+        !compact && locale === loc.code && 'text-ink',
+        !compact && locale !== loc.code && 'text-ink-faint hover:text-ink',
       ]"
     >
       {{ loc.code.toUpperCase() }}

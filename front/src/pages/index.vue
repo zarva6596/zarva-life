@@ -68,15 +68,15 @@ const paras = computed(() => [
 <template>
   <div class="flex min-h-[60vh] items-center justify-center px-6 py-16">
     <div class="flex max-w-xl flex-col gap-5">
-      <h1 class="text-4xl font-bold text-gray-900">
+      <h1 class="text-4xl font-bold text-ink">
         {{ t('pages.home.greeting') }}
       </h1>
 
-      <p class="indent-8 text-justify text-base leading-relaxed text-gray-500">
+      <p class="indent-8 text-justify text-base leading-relaxed text-ink-muted">
         {{ t('pages.home.intro') }}
         <NuxtLink
           :to="localePath('/cv')"
-          class="text-gray-700 underline underline-offset-2 hover:text-gray-900"
+          class="text-ink-secondary underline underline-offset-2 hover:text-ink"
         >
           {{ t('pages.home.cvLink') }}
         </NuxtLink>.
@@ -85,12 +85,12 @@ const paras = computed(() => [
       <p
         v-for="(para, index) in paras"
         :key="index"
-        class="indent-8 text-justify text-base leading-relaxed text-gray-500"
+        class="indent-8 text-justify text-base leading-relaxed text-ink-muted"
       >
         {{ para }}
       </p>
 
-      <p class="indent-8 text-justify text-base leading-relaxed text-gray-400">
+      <p class="indent-8 text-justify text-base leading-relaxed text-ink-faint">
         {{ t('pages.home.outro') }}
       </p>
 
@@ -98,7 +98,7 @@ const paras = computed(() => [
         <button
           v-for="(demo, index) in demoNotifications"
           :key="index"
-          class="cursor-pointer rounded-lg border border-gray-200 px-3 py-2 text-xs font-medium text-gray-700 transition-colors hover:border-gray-300 hover:bg-gray-50"
+          class="cursor-pointer rounded-lg border border-border px-3 py-2 text-xs font-medium text-ink-secondary transition-colors hover:border-border hover:bg-surface-secondary"
           @click="notificationsStore.notify(demo.payload)"
         >
           {{ demo.label }}

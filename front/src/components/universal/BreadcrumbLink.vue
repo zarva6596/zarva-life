@@ -11,14 +11,14 @@ defineProps<{
   <NuxtLink
     v-if="item.to && !isCurrent"
     :to="item.to"
-    class="transition-colors hover:text-gray-900"
+    class="transition-colors hover:text-ink"
   >
     {{ item.label }}
   </NuxtLink>
 
   <span
     v-else
-    class="font-medium text-gray-900"
+    class="font-medium text-ink"
     aria-current="page"
   >
     {{ item.label }}

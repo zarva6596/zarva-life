@@ -21,7 +21,7 @@ onMounted(() => {
     <div class="md:hidden">
       <div
         ref="contentRef"
-        class="text-base leading-relaxed text-gray-500"
+        class="text-base leading-relaxed text-ink-muted"
         :class="showMore ? '' : 'line-clamp-3'"
       >
         <p
@@ -36,7 +36,7 @@ onMounted(() => {
 
       <button
         v-if="isClamped || showMore"
-        class="mt-2 text-sm text-gray-400 hover:text-gray-600"
+        class="mt-2 text-sm text-ink-faint hover:text-ink-muted"
         @click="showMore = !showMore"
       >
         {{ showMore ? t('pages.cv.about.showLess') : t('pages.cv.about.showMore') }}
@@ -47,7 +47,7 @@ onMounted(() => {
       <p
         v-for="(paragraph, index) in paragraphs"
         :key="index"
-        class="indent-8 text-justify text-base leading-relaxed text-gray-500"
+        class="indent-8 text-justify text-base leading-relaxed text-ink-muted"
       >
         {{ paragraph }}
       </p>

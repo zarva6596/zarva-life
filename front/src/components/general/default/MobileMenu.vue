@@ -21,7 +21,7 @@ const onActionClick = async (action: { onClick?: () => void | Promise<void> }) =
   >
     <div
       v-if="isOpen"
-      class="fixed inset-x-0 top-16 z-40 flex flex-col overflow-y-auto bg-white"
+      class="fixed inset-x-0 top-16 z-40 flex flex-col overflow-y-auto bg-surface"
       style="height: calc(100dvh - 4rem); padding-bottom: env(safe-area-inset-bottom)"
     >
       <template
@@ -31,16 +31,16 @@ const onActionClick = async (action: { onClick?: () => void | Promise<void> }) =
         <NuxtLink
           v-if="item.to"
           :to="item.to"
-          class="border-b border-gray-100 px-6 py-4 text-base font-medium uppercase tracking-wide transition-colors duration-200 hover:bg-gray-50"
-          active-class="text-black"
-          inactive-class="text-black"
+          class="border-b border-border-subtle px-6 py-4 text-base font-medium uppercase tracking-wide transition-colors duration-200 hover:bg-surface-secondary"
+          active-class="text-ink"
+          inactive-class="text-ink"
           @click="isOpen = false"
         >
           {{ item.label }}
         </NuxtLink>
 
         <template v-else>
-          <div class="border-b border-gray-100 px-6 py-4 text-base font-medium uppercase tracking-wide text-gray-400">
+          <div class="border-b border-border-subtle px-6 py-4 text-base font-medium uppercase tracking-wide text-ink-faint">
             {{ item.label }}
           </div>
 
@@ -48,9 +48,9 @@ const onActionClick = async (action: { onClick?: () => void | Promise<void> }) =
             v-for="sub in hobbiesItems"
             :key="sub.key"
             :to="sub.to"
-            class="border-b border-gray-100 py-4 pl-10 pr-6 text-base font-medium uppercase tracking-wide transition-colors duration-200 hover:bg-gray-50"
-            active-class="text-black"
-            inactive-class="text-black"
+            class="border-b border-border-subtle py-4 pl-10 pr-6 text-base font-medium uppercase tracking-wide transition-colors duration-200 hover:bg-surface-secondary"
+            active-class="text-ink"
+            inactive-class="text-ink"
             @click="isOpen = false"
           >
             {{ sub.label }}
@@ -65,9 +65,9 @@ const onActionClick = async (action: { onClick?: () => void | Promise<void> }) =
         <NuxtLink
           v-if="action.to"
           :to="action.to"
-          class="border-b border-gray-100 px-6 py-4 text-base font-medium uppercase tracking-wide transition-colors duration-200 hover:bg-gray-50"
-          active-class="text-black"
-          inactive-class="text-black"
+          class="border-b border-border-subtle px-6 py-4 text-base font-medium uppercase tracking-wide transition-colors duration-200 hover:bg-surface-secondary"
+          active-class="text-ink"
+          inactive-class="text-ink"
           @click="isOpen = false"
         >
           {{ action.label }}
@@ -75,7 +75,7 @@ const onActionClick = async (action: { onClick?: () => void | Promise<void> }) =
 
         <button
           v-else
-          class="cursor-pointer border-b border-gray-100 px-6 py-4 text-left text-base font-medium uppercase tracking-wide transition-colors duration-200 hover:bg-gray-50"
+          class="cursor-pointer border-b border-border-subtle px-6 py-4 text-left text-base font-medium uppercase tracking-wide transition-colors duration-200 hover:bg-surface-secondary"
           @click="onActionClick(action)"
         >
           {{ action.label }}

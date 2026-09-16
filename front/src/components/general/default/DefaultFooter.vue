@@ -1,5 +1,5 @@
 <template>
-  <footer class="w-full border-t border-gray-200 bg-white px-6 py-4">
+  <footer class="w-full border-t border-border bg-surface px-6 py-4">
     Default Footer
   </footer>
 </template>

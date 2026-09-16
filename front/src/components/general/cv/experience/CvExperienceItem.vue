@@ -19,14 +19,14 @@ const emit = defineEmits<{
     >
       <div class="flex flex-col gap-0.5">
         <div class="flex items-center gap-1.5">
-          <span class="font-semibold text-gray-900">{{ props.experience.company }}</span>
+          <span class="font-semibold text-ink">{{ props.experience.company }}</span>
 
           <a
             v-if="props.experience.url"
             :href="props.experience.url"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-gray-400 hover:text-gray-700"
+            class="text-ink-faint hover:text-ink-secondary"
             @click.stop
           >
             <Icon
@@ -36,11 +36,11 @@ const emit = defineEmits<{
           </a>
         </div>
 
-        <span class="text-sm text-gray-500">{{ props.experience.role }}</span>
+        <span class="text-sm text-ink-muted">{{ props.experience.role }}</span>
       </div>
 
       <div class="flex shrink-0 items-center gap-8">
-        <div class="flex flex-col items-end gap-0.5 text-xs text-gray-400">
+        <div class="flex flex-col items-end gap-0.5 text-xs text-ink-faint">
           <ExperienceLabel
             :start-date="props.experience.startDate"
             :end-date="props.experience.endDate"
@@ -61,7 +61,7 @@ const emit = defineEmits<{
 
         <Icon
           name="lucide:chevron-down"
-          class="size-5 shrink-0 text-gray-400 transition-transform duration-300"
+          class="size-5 shrink-0 text-ink-faint transition-transform duration-300"
           :class="props.open ? 'rotate-180' : ''"
         />
       </div>
@@ -73,7 +73,7 @@ const emit = defineEmits<{
     >
       <div class="overflow-hidden">
         <div class="flex flex-col gap-4 py-4">
-          <p class="text-sm leading-relaxed text-gray-500">{{ props.experience.description }}</p>
+          <p class="text-sm leading-relaxed text-ink-muted">{{ props.experience.description }}</p>
 
           <ul
             v-if="props.experience.achievements.length"
@@ -82,9 +82,9 @@ const emit = defineEmits<{
             <li
               v-for="(achievement, index) in props.experience.achievements"
               :key="index"
-              class="flex gap-2 text-sm text-gray-500"
+              class="flex gap-2 text-sm text-ink-muted"
             >
-              <span class="mt-1.5 size-1.5 shrink-0 rounded-full bg-gray-400" />
+              <span class="mt-1.5 size-1.5 shrink-0 rounded-full bg-ink-faint" />
               {{ achievement }}
             </li>
           </ul>

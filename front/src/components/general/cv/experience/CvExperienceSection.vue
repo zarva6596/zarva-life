@@ -23,9 +23,9 @@ const toggle = (index: number) => {
     <div
       v-for="(item, index) in experience"
       :key="index"
-      class="relative border-b border-gray-100 pl-6 last:border-0
-        before:absolute before:left-0 before:top-3.5 before:h-full before:w-px before:bg-gray-200 last:before:hidden
-        after:absolute after:left-[-3px] after:top-3.5 after:size-1.5 after:rounded-full after:bg-gray-400"
+      class="relative border-b border-border-subtle pl-6 last:border-0
+        before:absolute before:left-0 before:top-3.5 before:h-full before:w-px before:bg-surface-tertiary last:before:hidden
+        after:absolute after:left-[-3px] after:top-3.5 after:size-1.5 after:rounded-full after:bg-ink-faint"
     >
       <CvExperienceItem
         :experience="item"

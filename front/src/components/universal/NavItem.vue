@@ -18,7 +18,7 @@ withDefaults(defineProps<{
   >
     <a
       :href="href ?? undefined"
-      class="flex h-full items-center px-3 font-medium tracking-wide transition-colors duration-500 hover:bg-black hover:text-white"
+      class="flex h-full items-center px-3 font-medium tracking-wide text-ink transition-colors duration-500 hover:bg-invert hover:text-invert-text"
       :class="[
         size === 'sm' ? 'text-sm' : 'text-base',
         uppercase && 'uppercase',
