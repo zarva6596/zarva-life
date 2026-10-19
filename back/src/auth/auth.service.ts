@@ -57,11 +57,12 @@ export class AuthService {
 
   getCookieOptions() {
     const maxAgeMs = this.parseExpiryToMs(this.configService.get<string>('JWT_EXPIRES_IN') ?? '7d')
+    const isProduction = this.configService.get('NODE_ENV') === 'production'
 
     return {
       httpOnly: true,
-      sameSite: 'lax' as const,
-      secure: this.configService.get('NODE_ENV') === 'production',
+      sameSite: isProduction ? 'none' as const : 'lax' as const,
+      secure: isProduction,
       path: '/',
       maxAge: maxAgeMs,
     }
